@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GsNet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61f5d1143b34f49247879b59cbba2462cc724424")]
 [assembly: System.Reflection.AssemblyProductAttribute("GsNet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GsNet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

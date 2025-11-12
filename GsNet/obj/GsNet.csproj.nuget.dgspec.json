@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\GsNet\\GsNet\\GsNet.csproj": {}
+    "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\Global_NET\\GsNet\\GsNet.csproj": {}
   },
   "projects": {
-    "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\GsNet\\GsNet\\GsNet.csproj": {
+    "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\Global_NET\\GsNet\\GsNet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\GsNet\\GsNet\\GsNet.csproj",
+        "projectUniqueName": "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\Global_NET\\GsNet\\GsNet.csproj",
         "projectName": "GsNet",
-        "projectPath": "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\GsNet\\GsNet\\GsNet.csproj",
+        "projectPath": "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\Global_NET\\GsNet\\GsNet.csproj",
         "packagesPath": "C:\\Users\\heito\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\GsNet\\GsNet\\obj\\",
+        "outputPath": "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\Global_NET\\GsNet\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\heito\\AppData\\Roaming\\NuGet\\NuGet.Config"

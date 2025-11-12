@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WO9mEMKkVmM=",
+  "dgSpecHash": "EIBAKjvUZMA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\GsNet\\GsNet\\GsNet.csproj",
+  "projectFilePath": "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\Global_NET\\GsNet\\GsNet.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\heito\\.nuget\\packages\\automapper\\15.1.0\\automapper.15.1.0.nupkg.sha512",
     "C:\\Users\\heito\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
