@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GsNet", "GsNet\GsNet.csproj", "{EDFB53DA-6F28-497F-95AE-B6043361709A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDFB53DA-6F28-497F-95AE-B6043361709A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDFB53DA-6F28-497F-95AE-B6043361709A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDFB53DA-6F28-497F-95AE-B6043361709A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDFB53DA-6F28-497F-95AE-B6043361709A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
