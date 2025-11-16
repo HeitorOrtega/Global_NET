@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GsNet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70ea8f60fd20cb0323f1359fc24c938bc0a32d8d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed0f0c6e6975d4df91b302a2759b8f4890433374")]
 [assembly: System.Reflection.AssemblyProductAttribute("GsNet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GsNet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

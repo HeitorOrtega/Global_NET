@@ -1,0 +1,40 @@
+﻿using Microsoft.EntityFrameworkCore;
+using GsNetApi.Data;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Configure DbContext
+var connectionString = builder.Configuration.GetConnectionString("OracleConnection");
+if (string.IsNullOrEmpty(connectionString))
+{
+    throw new InvalidOperationException("A Connection String 'OracleConnection' não foi encontrada no appsettings.json.");
+}
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseOracle(connectionString, o => o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery))
+);
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+// Minimal health endpoint
+app.MapGet("/", () => Results.Ok(new { status = "API running" }));
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();

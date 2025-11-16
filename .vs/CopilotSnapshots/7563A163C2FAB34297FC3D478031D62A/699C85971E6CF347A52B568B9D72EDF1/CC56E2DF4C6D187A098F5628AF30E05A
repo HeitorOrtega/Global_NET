@@ -1,0 +1,35 @@
+﻿using Microsoft.EntityFrameworkCore;
+using GsNetApi.Data;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddControllers();
+
+// Register DbContext if a connection string exists in configuration
+var conn = builder.Configuration.GetConnectionString("DefaultConnection");
+if (!string.IsNullOrEmpty(conn))
+{
+    builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseOracle(conn));
+}
+
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    // app.UseSwaggerUI(); // Leave out if SwaggerUI middleware not referenced
+}
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
