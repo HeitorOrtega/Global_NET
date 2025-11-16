@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using GsNetApi.Models;
 using GsNetApi.Services.Interfaces;
+using Asp.Versioning;
 
 namespace GsNetApi.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     public class LocalizacaoTrabalhoController : ControllerBase
     {
         private readonly ILocalizacaoTrabalhoService _service;

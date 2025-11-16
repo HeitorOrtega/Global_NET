@@ -1,0 +1,60 @@
+﻿using GsNetApi.Services.Interfaces;
+using GsNetApi.Data;
+using GsNetApi.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace GsNetApi.Services
+{
+    public class UsuarioService : IUsuarioService
+    {
+        private readonly ApplicationDbContext _context;
+
+        public UsuarioService(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<IEnumerable<Usuario>> GetAllAsync()
+        {
+            return await _context.Usuario.Include(u => u.LocTrabalho).Include(u => u.Mensagens).ToListAsync();
+        }
+
+        public async Task<Usuario?> GetByIdAsync(long id)
+        {
+            return await _context.Usuario.Include(u => u.LocTrabalho).Include(u => u.Mensagens).FirstOrDefaultAsync(u => u.Id == id);
+        }
+
+        public async Task<Usuario> CreateAsync(Usuario usuario)
+        {
+            _context.Usuario.Add(usuario);
+            await _context.SaveChangesAsync();
+            return usuario;
+        }
+
+        public async Task<Usuario?> UpdateAsync(long id, Usuario usuario)
+        {
+            var existing = await _context.Usuario.FindAsync(id);
+            if (existing == null) return null;
+
+            existing.Nome = usuario.Nome;
+            existing.Cpf = usuario.Cpf;
+            existing.Email = usuario.Email;
+            existing.Senha = usuario.Senha;
+            existing.LocalizacaoTrabalhoId = usuario.LocalizacaoTrabalhoId;
+
+            _context.Usuario.Update(existing);
+            await _context.SaveChangesAsync();
+            return existing;
+        }
+
+        public async Task<bool> DeleteAsync(long id)
+        {
+            var existing = await _context.Usuario.FindAsync(id);
+            if (existing == null) return false;
+
+            _context.Usuario.Remove(existing);
+            await _context.SaveChangesAsync();
+            return true;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-using GsNet.Interfaces;
+using GsNetApi.Services.Interfaces;
 using GsNetApi.Data;
 using GsNetApi.Models;
 using Microsoft.EntityFrameworkCore;

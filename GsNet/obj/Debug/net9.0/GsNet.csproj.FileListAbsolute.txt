@@ -286,3 +286,6 @@ C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\obj\Debug\net9.0\GsNe
 C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\obj\Debug\net9.0\GsNet.genruntimeconfig.cache
 C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\obj\Debug\net9.0\ref\GsNet.dll
 C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\Asp.Versioning.Abstractions.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\Asp.Versioning.Http.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\Asp.Versioning.Mvc.dll

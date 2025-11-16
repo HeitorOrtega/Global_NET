@@ -1,0 +1,101 @@
+﻿using Microsoft.EntityFrameworkCore;
+using GsNetApi.Data;
+using GsNetApi.Services;
+using GsNetApi.Services.Interfaces;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Versioning;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.OpenApi.Models;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers();
+
+// API Versioning
+builder.Services.AddApiVersioning(options =>
+{
+    options.DefaultApiVersion = new ApiVersion(1, 0);
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.ReportApiVersions = true;
+    options.ApiVersionReader = ApiVersionReader.Combine(
+        new QueryStringApiVersionReader("v"),
+        new HeaderApiVersionReader("x-api-version")
+    );
+});
+
+// Versioned API Explorer for Swagger
+builder.Services.AddVersionedApiExplorer(options =>
+{
+    options.GroupNameFormat = "'v'VVV"; // v1, v1.0
+    options.SubstituteApiVersionInUrl = true;
+});
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Configure Swagger generation for each discovered API version
+builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
+
+var connectionString = builder.Configuration.GetConnectionString("OracleConnection");
+if (string.IsNullOrEmpty(connectionString))
+{
+    throw new InvalidOperationException("A Connection String 'OracleConnection' não foi encontrada no appsettings.json.");
+}
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseOracle(connectionString, o => o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery))
+);
+
+// Register services
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<ILocalizacaoTrabalhoService, LocalizacaoTrabalhoService>();
+builder.Services.AddScoped<IMensagemService, MensagemService>();
+builder.Services.AddScoped<ILoginService, LoginService>();
+
+var app = builder.Build();
+
+// Resolve version provider to setup Swagger UI
+var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(options =>
+    {
+        foreach (var description in provider.ApiVersionDescriptions)
+        {
+            options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
+        }
+    });
+}
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
+
+// Swagger options configuration class
+public class ConfigureSwaggerOptions : Microsoft.Extensions.Options.IConfigureOptions<SwaggerGenOptions>
+{
+    private readonly IApiVersionDescriptionProvider _provider;
+
+    public ConfigureSwaggerOptions(IApiVersionDescriptionProvider provider)
+    {
+        _provider = provider;
+    }
+
+    public void Configure(SwaggerGenOptions options)
+    {
+        foreach (var description in _provider.ApiVersionDescriptions)
+        {
+            options.SwaggerDoc(description.GroupName, new OpenApiInfo
+            {
+                Title = $"GsNet API {description.ApiVersion}",
+                Version = description.ApiVersion.ToString()
+            });
+        }
+    }
+}
