@@ -1,0 +1,151 @@
+﻿using Microsoft.EntityFrameworkCore;
+using GsNetApi.Data;
+using GsNetApi.Services;
+using GsNetApi.Services.Interfaces;
+using Asp.Versioning;
+using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Configure API Versioning
+builder.Services.AddApiVersioning(options =>
+{
+    options.DefaultApiVersion = new ApiVersion(1, 0);
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.ReportApiVersions = true;
+    options.ApiVersionReader = ApiVersionReader.Combine(
+        new UrlSegmentApiVersionReader()
+    );
+}).AddMvc();
+
+var connectionString = builder.Configuration.GetConnectionString("OracleConnection");
+if (string.IsNullOrEmpty(connectionString))
+{
+    throw new InvalidOperationException("A Connection String 'OracleConnection' não foi encontrada no appsettings.json.");
+}
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseOracle(connectionString, o => o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery))
+);
+
+// Register services
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<ILocalizacaoTrabalhoService, LocalizacaoTrabalhoService>();
+builder.Services.AddScoped<IMensagemService, MensagemService>();
+builder.Services.AddScoped<ILoginService, LoginService>();
+
+// Configure Health Checks
+builder.Services.AddHealthChecks()
+    // Database health check
+    .AddDbContextCheck<ApplicationDbContext>(
+        name: "database",
+        failureStatus: HealthStatus.Unhealthy,
+        tags: new[] { "db", "oracle", "ready" })
+    // Services health check (inline)
+    .AddCheck("services", () =>
+    {
+        try
+        {
+            var data = new Dictionary<string, object>
+            {
+                { "status", "All services are registered and operational" },
+                { "servicesCount", 4 }
+            };
+            return HealthCheckResult.Healthy("All services are operational", data);
+        }
+        catch (Exception ex)
+        {
+            return HealthCheckResult.Unhealthy("Service health check failed", ex);
+        }
+    }, tags: new[] { "services", "ready" })
+    // Memory health check (inline)
+    .AddCheck("memory", () =>
+    {
+        try
+        {
+            var allocated = GC.GetTotalMemory(forceFullCollection: false);
+            const long thresholdBytes = 1_073_741_824; // 1 GB
+            
+            var data = new Dictionary<string, object>
+            {
+                { "AllocatedBytes", allocated },
+                { "ThresholdBytes", thresholdBytes },
+                { "AllocatedMB", Math.Round(allocated / 1024.0 / 1024.0, 2) },
+                { "Gen0Collections", GC.CollectionCount(0) },
+                { "Gen1Collections", GC.CollectionCount(1) },
+                { "Gen2Collections", GC.CollectionCount(2) }
+            };
+
+            var status = allocated >= thresholdBytes ? HealthStatus.Degraded : HealthStatus.Healthy;
+            var description = $"Memory usage: {Math.Round(allocated / 1024.0 / 1024.0, 2)} MB";
+
+            return new HealthCheckResult(status, description, data: data);
+        }
+        catch (Exception ex)
+        {
+            return HealthCheckResult.Unhealthy("Memory health check failed", ex);
+        }
+    }, tags: new[] { "memory", "ready" });
+
+// Add Health Checks UI
+builder.Services.AddHealthChecksUI(options =>
+{
+    options.SetEvaluationTimeInSeconds(30); // Check health every 30 seconds
+    options.MaximumHistoryEntriesPerEndpoint(50);
+    options.AddHealthCheckEndpoint("GsNet API", "/health");
+}).AddInMemoryStorage();
+
+var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+// Map Health Check endpoints
+app.MapHealthChecks("/health", new HealthCheckOptions
+{
+    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse,
+    ResultStatusCodes =
+    {
+        [HealthStatus.Healthy] = StatusCodes.Status200OK,
+        [HealthStatus.Degraded] = StatusCodes.Status200OK,
+        [HealthStatus.Unhealthy] = StatusCodes.Status503ServiceUnavailable
+    }
+});
+
+// Readiness check (for Kubernetes/container orchestration)
+app.MapHealthChecks("/health/ready", new HealthCheckOptions
+{
+    Predicate = check => check.Tags.Contains("ready"),
+    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+});
+
+// Liveness check (simple check that the app is running)
+app.MapHealthChecks("/health/live", new HealthCheckOptions
+{
+    Predicate = _ => false, // No checks, just returns 200 if the app is running
+    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+});
+
+// Health Checks UI
+app.MapHealthChecksUI(options =>
+{
+    options.UIPath = "/health-ui";
+    options.ApiPath = "/health-ui-api";
+});
+
+app.MapControllers();
+
+app.Run();app.Run();

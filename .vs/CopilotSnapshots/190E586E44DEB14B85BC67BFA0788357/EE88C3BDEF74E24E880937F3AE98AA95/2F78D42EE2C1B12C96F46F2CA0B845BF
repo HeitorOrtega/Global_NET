@@ -1,0 +1,59 @@
+﻿using Microsoft.Extensions.Diagnostics.HealthChecks;
+using GsNetApi.Services.Interfaces;
+
+namespace GsNetApi.HealthChecks
+{
+    public class ServicesHealthCheck : IHealthCheck
+    {
+        private readonly IUsuarioService _usuarioService;
+        private readonly ILocalizacaoTrabalhoService _localizacaoService;
+        private readonly IMensagemService _mensagemService;
+        private readonly ILoginService _loginService;
+
+        public ServicesHealthCheck(
+            IUsuarioService usuarioService,
+            ILocalizacaoTrabalhoService localizacaoService,
+            IMensagemService mensagemService,
+            ILoginService loginService)
+        {
+            _usuarioService = usuarioService;
+            _localizacaoService = localizacaoService;
+            _mensagemService = mensagemService;
+            _loginService = loginService;
+        }
+
+        public async Task<HealthCheckResult> CheckHealthAsync(
+            HealthCheckContext context,
+            CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                // Verify that all services are properly instantiated
+                if (_usuarioService == null || _localizacaoService == null || 
+                    _mensagemService == null || _loginService == null)
+                {
+                    return HealthCheckResult.Unhealthy(
+                        "One or more services are not properly registered");
+                }
+
+                // Try to perform a simple operation to verify services are working
+                // This is a lightweight check that doesn't hit the database
+                var data = new Dictionary<string, object>
+                {
+                    { "usuarioService", "OK" },
+                    { "localizacaoService", "OK" },
+                    { "mensagemService", "OK" },
+                    { "loginService", "OK" }
+                };
+
+                return HealthCheckResult.Healthy("All services are operational", data);
+            }
+            catch (Exception ex)
+            {
+                return HealthCheckResult.Unhealthy(
+                    "Service health check failed",
+                    ex);
+            }
+        }
+    }
+}

@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|c:\\users\\gabri\\onedrive\\\u00E1rea de trabalho\\global_net\\gsnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|solutionrelative:gsnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|c:\\users\\gabri\\onedrive\\\u00E1rea de trabalho\\global_net\\gsnet\\gsnet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|solutionrelative:gsnet\\gsnet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|c:\\users\\gabri\\onedrive\\\u00E1rea de trabalho\\global_net\\gsnet\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|solutionrelative:gsnet\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|c:\\users\\gabri\\onedrive\\\u00E1rea de trabalho\\global_net\\gsnet\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|solutionrelative:gsnet\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|c:\\users\\gabri\\onedrive\\\u00E1rea de trabalho\\global_net\\gsnet\\controllers\\mensagemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|solutionrelative:gsnet\\controllers\\mensagemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,16 +27,8 @@
       "RelativeMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|solutionrelative:gsnet\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|c:\\users\\gabri\\onedrive\\\u00E1rea de trabalho\\global_net\\gsnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|solutionrelative:gsnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|c:\\users\\gabri\\onedrive\\\u00E1rea de trabalho\\global_net\\gsnet\\migrations\\20251112215555_initialstructurefluente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|solutionrelative:gsnet\\migrations\\20251112215555_initialstructurefluente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|c:\\users\\gabri\\onedrive\\\u00E1rea de trabalho\\global_net\\gsnet\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|solutionrelative:gsnet\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|c:\\users\\gabri\\onedrive\\\u00E1rea de trabalho\\global_net\\gsnet\\controllers\\localizacaotrabalhocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|c:\\users\\gabri\\onedrive\\\u00E1rea de trabalho\\global_net\\gsnet\\models\\localizacaotrabalho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|solutionrelative:gsnet\\models\\localizacaotrabalho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|c:\\users\\gabri\\onedrive\\\u00E1rea de trabalho\\global_net\\gsnet\\gsnet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|solutionrelative:gsnet\\gsnet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EDFB53DA-6F28-497F-95AE-B6043361709A}|GsNet\\GsNet.csproj|c:\\users\\gabri\\onedrive\\\u00E1rea de trabalho\\global_net\\gsnet\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,7 +70,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "GsNet\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\appsettings.Development.json",
+              "RelativeToolTip": "GsNet\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-16T21:25:19.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MensagemController.cs",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\Controllers\\MensagemController.cs",
               "RelativeDocumentMoniker": "GsNet\\Controllers\\MensagemController.cs",
@@ -79,33 +96,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "GsNet\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "GsNet\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T21:11:07.783Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "UsuarioController.cs",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\Controllers\\UsuarioController.cs",
               "RelativeDocumentMoniker": "GsNet\\Controllers\\UsuarioController.cs",
               "ToolTip": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\Controllers\\UsuarioController.cs",
               "RelativeToolTip": "GsNet\\Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T21:11:02.183Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T21:11:02.183Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "20251112215555_InitialStructureFluente.cs",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\Migrations\\20251112215555_InitialStructureFluente.cs",
               "RelativeDocumentMoniker": "GsNet\\Migrations\\20251112215555_InitialStructureFluente.cs",
@@ -113,25 +116,24 @@
               "RelativeToolTip": "GsNet\\Migrations\\20251112215555_InitialStructureFluente.cs",
               "ViewState": "AgIAAFgAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T21:08:35.176Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T21:08:35.176Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\appsettings.json",
               "RelativeDocumentMoniker": "GsNet\\appsettings.json",
               "ToolTip": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\appsettings.json",
               "RelativeToolTip": "GsNet\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-11-16T21:08:03.857Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "LocalizacaoTrabalhoController.cs",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\Controllers\\LocalizacaoTrabalhoController.cs",
               "RelativeDocumentMoniker": "GsNet\\Controllers\\LocalizacaoTrabalhoController.cs",
@@ -139,12 +141,11 @@
               "RelativeToolTip": "GsNet\\Controllers\\LocalizacaoTrabalhoController.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAtwDoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T21:07:01.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T21:07:01.325Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "LocalizacaoTrabalho.cs",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\Models\\LocalizacaoTrabalho.cs",
               "RelativeDocumentMoniker": "GsNet\\Models\\LocalizacaoTrabalho.cs",
@@ -152,12 +153,11 @@
               "RelativeToolTip": "GsNet\\Models\\LocalizacaoTrabalho.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T21:06:56.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T21:06:56.268Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "LoginService.cs",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\Services\\LoginService.cs",
               "RelativeDocumentMoniker": "GsNet\\Services\\LoginService.cs",
@@ -165,12 +165,11 @@
               "RelativeToolTip": "GsNet\\Services\\LoginService.cs",
               "ViewState": "AgIAADYAAAAAAAAAAABRwAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T21:03:37.687Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T21:03:37.687Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "UsuarioService.cs",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\Services\\UsuarioService.cs",
               "RelativeDocumentMoniker": "GsNet\\Services\\UsuarioService.cs",
@@ -178,26 +177,37 @@
               "RelativeToolTip": "GsNet\\Services\\UsuarioService.cs",
               "ViewState": "AgIAADkAAAAAAAAAAABRwAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T21:03:30.167Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T21:03:30.167Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\Program.cs",
               "RelativeDocumentMoniker": "GsNet\\Program.cs",
               "ToolTip": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\Program.cs",
               "RelativeToolTip": "GsNet\\Program.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAArwBwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAASwDcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-16T21:02:53.006Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GsNet",
+              "DocumentIndex": 12,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "GsNet\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "GsNet\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T21:11:07.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GsNet.csproj",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\GsNet.csproj",
               "RelativeDocumentMoniker": "GsNet\\GsNet.csproj",
               "ToolTip": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\GsNet.csproj",
@@ -209,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\Global_NET\\GsNet\\Models\\Login.cs",
               "RelativeDocumentMoniker": "GsNet\\Models\\Login.cs",
@@ -217,8 +227,7 @@
               "RelativeToolTip": "GsNet\\Models\\Login.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T21:02:03.033Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T21:02:03.033Z"
             }
           ]
         }

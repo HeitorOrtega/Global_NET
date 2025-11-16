@@ -1,0 +1,69 @@
+﻿using Microsoft.EntityFrameworkCore;
+using GsNetApi.Data;
+using GsNetApi.Services;
+using GsNetApi.Services.Interfaces;
+using Asp.Versioning;
+using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddApiVersioning(options =>
+{
+    options.DefaultApiVersion = new ApiVersion(1, 0);
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.ReportApiVersions = true;
+    options.ApiVersionReader = ApiVersionReader.Combine(
+        new UrlSegmentApiVersionReader()
+    );
+}).AddMvc();
+
+var connectionString = builder.Configuration.GetConnectionString("OracleConnection");
+if (string.IsNullOrEmpty(connectionString))
+{
+    throw new InvalidOperationException("A Connection String 'OracleConnection' não foi encontrada no appsettings.json.");
+}
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseOracle(connectionString, o => o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery))
+);
+
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<ILocalizacaoTrabalhoService, LocalizacaoTrabalhoService>();
+builder.Services.AddScoped<IMensagemService, MensagemService>();
+builder.Services.AddScoped<ILoginService, LoginService>();
+
+builder.Services.AddHealthChecks()
+    .AddOracle(
+        connectionString: connectionString,
+        name: "oracle-database",
+        failureStatus: HealthStatus.Degraded,
+        tags: new[] { "db", "oracle", "sql" }
+    );
+builder.Services.AddHealthChecksUI(opt =>
+{
+    opt.SetEvaluationTimeInSeconds(5);
+    opt.MaximumHistoryEntriesPerEndpoint(10);
+    opt.AddHealthCheckEndpoint("API Health Check", "http://localhost:50066/health");
+}).AddInMemoryStorage();
+
+var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();app.Run();

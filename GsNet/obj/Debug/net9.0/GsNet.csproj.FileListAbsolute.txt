@@ -289,3 +289,16 @@ C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\Swas
 C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\Asp.Versioning.Abstractions.dll
 C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\Asp.Versioning.Http.dll
 C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\Asp.Versioning.Mvc.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\HealthChecks.UI.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\HealthChecks.UI.Client.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\HealthChecks.UI.Core.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\HealthChecks.UI.Data.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\HealthChecks.UI.InMemory.Storage.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\Fractions.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\IdentityModel.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\IdentityModel.OidcClient.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\KubernetesClient.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Global_NET\GsNet\bin\Debug\net9.0\YamlDotNet.dll

@@ -1,0 +1,56 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Asp.Versioning;
+using System.Reflection;
+
+namespace GsNetApi.Controllers
+{
+    [ApiController]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
+    public class HealthController : ControllerBase
+    {
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public IActionResult GetHealthInfo()
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            var version = assembly.GetName().Version;
+            
+            var healthInfo = new
+            {
+                status = "Healthy",
+                application = "GsNet API",
+                version = version?.ToString() ?? "1.0.0.0",
+                environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production",
+                timestamp = DateTime.UtcNow,
+                uptime = TimeSpan.FromMilliseconds(Environment.TickCount64),
+                endpoints = new
+                {
+                    health = "/health",
+                    healthReady = "/health/ready",
+                    healthLive = "/health/live",
+                    healthUI = "/health-ui"
+                },
+                checks = new[]
+                {
+                    new { name = "database", description = "Oracle database connectivity check" },
+                    new { name = "services", description = "Application services availability check" },
+                    new { name = "memory", description = "Memory usage check" }
+                }
+            };
+
+            return Ok(healthInfo);
+        }
+
+        [HttpGet("ping")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public IActionResult Ping()
+        {
+            return Ok(new
+            {
+                status = "pong",
+                timestamp = DateTime.UtcNow
+            });
+        }
+    }
+}
