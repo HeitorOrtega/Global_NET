@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using GsNetApi.Models; 
+using GsNetApi.Models;
 
 namespace GsNetApi.Data
 {
@@ -17,7 +17,7 @@ namespace GsNetApi.Data
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("SEU_SCHEMA_AQUI");
+            modelBuilder.HasDefaultSchema("RM557825");
 
             modelBuilder.Entity<LocalizacaoTrabalho>().ToTable("TB_GS_LOCALIZACAO");
             modelBuilder.Entity<Usuario>().ToTable("TB_GS_USUARIO");
@@ -28,7 +28,7 @@ namespace GsNetApi.Data
                 .HasOne(u => u.LocTrabalho)           
                 .WithMany(lt => lt.Usuarios)        
                 .HasForeignKey(u => u.LocalizacaoTrabalhoId) 
-                .HasConstraintName("FK_USUARIO_LOCAL")
+                .HasConstraintName("FK_USUARIO_LOCALIZACAO")
                 .OnDelete(DeleteBehavior.Restrict); 
             
             modelBuilder.Entity<Mensagem>()
@@ -36,14 +36,11 @@ namespace GsNetApi.Data
                 .WithMany(u => u.Mensagens)           
                 .HasForeignKey(m => m.UsuarioId)      
                 .HasConstraintName("FK_MENSAGEM_USUARIO")
-                .OnDelete(DeleteBehavior.Restrict); 
-            
+                .OnDelete(DeleteBehavior.Restrict);
+
             modelBuilder.Entity<LocalizacaoTrabalho>()
-                .Property(l => l.Tipo)
-                .HasConversion<string>(); 
+                .Property(l => l.Tipo);
 
-
-            
             base.OnModelCreating(modelBuilder);
         }
     }
