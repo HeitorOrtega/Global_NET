@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\Global_NET\\gsnet.tests\\GsNet.Tests.csproj": {}
+    "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\Global_NET\\GsNet.Tests\\GsNet.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\Global_NET\\gsnet.tests\\GsNet.Tests.csproj": {
+    "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\Global_NET\\GsNet.Tests\\GsNet.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\Global_NET\\gsnet.tests\\GsNet.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\Global_NET\\GsNet.Tests\\GsNet.Tests.csproj",
         "projectName": "GsNet.Tests",
-        "projectPath": "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\Global_NET\\gsnet.tests\\GsNet.Tests.csproj",
+        "projectPath": "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\Global_NET\\GsNet.Tests\\GsNet.Tests.csproj",
         "packagesPath": "C:\\Users\\heito\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\Global_NET\\gsnet.tests\\obj\\",
+        "outputPath": "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\Global_NET\\GsNet.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\heito\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,6 +26,9 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+              "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\Global_NET\\GsNetApi\\GsNetApi.csproj": {
+                "projectPath": "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\Global_NET\\GsNetApi\\GsNetApi.csproj"
+              },
               "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\Global_NET\\GsNet\\GsNet.csproj": {
                 "projectPath": "C:\\Users\\heito\\OneDrive\\Área de Trabalho\\Global_NET\\GsNet\\GsNet.csproj"
               }

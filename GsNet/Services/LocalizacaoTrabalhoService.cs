@@ -16,12 +16,16 @@ namespace GsNetApi.Services
 
         public async Task<IEnumerable<LocalizacaoTrabalho>> GetAllAsync()
         {
-            return await _context.LocalizacaoTrabalho.Include(l => l.Usuarios).ToListAsync();
+            return await _context.LocalizacaoTrabalho
+                .Include(l => l.Usuarios)
+                .ToListAsync();
         }
 
         public async Task<LocalizacaoTrabalho?> GetByIdAsync(long id)
         {
-            return await _context.LocalizacaoTrabalho.Include(l => l.Usuarios).FirstOrDefaultAsync(l => l.Id == id);
+            return await _context.LocalizacaoTrabalho
+                .Include(l => l.Usuarios)
+                .FirstOrDefaultAsync(l => l.Id == id);
         }
 
         public async Task<LocalizacaoTrabalho> CreateAsync(LocalizacaoTrabalho entity)
@@ -47,8 +51,14 @@ namespace GsNetApi.Services
 
         public async Task<bool> DeleteAsync(long id)
         {
-            var existing = await _context.LocalizacaoTrabalho.FindAsync(id);
+            var existing = await _context.LocalizacaoTrabalho
+                .Include(l => l.Usuarios)
+                .FirstOrDefaultAsync(l => l.Id == id);
+
             if (existing == null) return false;
+
+            if (existing.Usuarios.Any())
+                throw new InvalidOperationException("Não é possível deletar esta localização: existem usuários associados.");
 
             _context.LocalizacaoTrabalho.Remove(existing);
             await _context.SaveChangesAsync();

@@ -21,7 +21,7 @@ namespace GsNetApi.Models
         public long UsuarioId { get; set; } 
 
         [ForeignKey(nameof(UsuarioId))]
-        public Usuario Usuario { get; set; }
+        public Usuario? Usuario { get; set; }
 
         public Mensagem() { }
     }

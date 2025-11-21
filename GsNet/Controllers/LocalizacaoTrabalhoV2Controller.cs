@@ -77,10 +77,18 @@ namespace GsNetApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(long id)
         {
-            var deleted = await _service.DeleteAsync(id);
-            if (!deleted) return NotFound();
+            try
+            {
+                var deleted = await _service.DeleteAsync(id);
+                if (!deleted)
+                    return NotFound();
 
-            return NoContent();
+                return NoContent();
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
 
         private object AddHateoasLinks(LocalizacaoTrabalho item)

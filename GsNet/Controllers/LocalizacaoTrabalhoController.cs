@@ -21,21 +21,13 @@ namespace GsNetApi.Controllers
             _linkGenerator = linkGenerator;
         }
 
-        // GET paginado
         [HttpGet]
-        public async Task<IActionResult> GetAll(
-            [FromQuery] int page = 1,
-            [FromQuery] int pageSize = 10)
+        public async Task<IActionResult> GetAll([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
         {
             var items = await _service.GetAllAsync();
-
             var totalItems = items.Count();
             var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
-
-            var pagedItems = items
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .ToList();
+            var pagedItems = items.Skip((page - 1) * pageSize).Take(pageSize).ToList();
 
             var response = new
             {
@@ -54,7 +46,6 @@ namespace GsNetApi.Controllers
         {
             var item = await _service.GetByIdAsync(id);
             if (item == null) return NotFound();
-
             return Ok(AddHateoasLinks(item));
         }
 
@@ -62,7 +53,6 @@ namespace GsNetApi.Controllers
         public async Task<IActionResult> Create([FromBody] LocalizacaoTrabalho entity)
         {
             var created = await _service.CreateAsync(entity);
-
             var url = _linkGenerator.GetUriByAction(
                 HttpContext,
                 action: nameof(GetById),
@@ -77,33 +67,32 @@ namespace GsNetApi.Controllers
         {
             var updated = await _service.UpdateAsync(id, entity);
             if (updated == null) return NotFound();
-
             return Ok(AddHateoasLinks(updated));
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(long id)
         {
-            var deleted = await _service.DeleteAsync(id);
-            if (!deleted) return NotFound();
+            try
+            {
+                var deleted = await _service.DeleteAsync(id);
+                if (!deleted)
+                    return NotFound();
 
-            return NoContent();
+                return NoContent();
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
 
-        // HATEOAS
+
         private object AddHateoasLinks(LocalizacaoTrabalho item)
         {
-            var self = _linkGenerator.GetUriByAction(HttpContext,
-                nameof(GetById),
-                values: new { id = item.Id, version = "1.0" });
-
-            var update = _linkGenerator.GetUriByAction(HttpContext,
-                nameof(Update),
-                values: new { id = item.Id, version = "1.0" });
-
-            var delete = _linkGenerator.GetUriByAction(HttpContext,
-                nameof(Delete),
-                values: new { id = item.Id, version = "1.0" });
+            var self = _linkGenerator.GetUriByAction(HttpContext, nameof(GetById), values: new { id = item.Id, version = "1.0" });
+            var update = _linkGenerator.GetUriByAction(HttpContext, nameof(Update), values: new { id = item.Id, version = "1.0" });
+            var delete = _linkGenerator.GetUriByAction(HttpContext, nameof(Delete), values: new { id = item.Id, version = "1.0" });
 
             return new
             {
