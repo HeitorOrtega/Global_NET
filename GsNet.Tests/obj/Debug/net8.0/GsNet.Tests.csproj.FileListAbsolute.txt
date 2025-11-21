@@ -1,0 +1,6 @@
+C:\Users\heito\OneDrive\Área de Trabalho\Global_NET\gsnet.tests\obj\Debug\net8.0\GsNet.Tests.csproj.AssemblyReference.cache
+C:\Users\heito\OneDrive\Área de Trabalho\Global_NET\gsnet.tests\obj\Debug\net8.0\GsNet.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\heito\OneDrive\Área de Trabalho\Global_NET\gsnet.tests\obj\Debug\net8.0\GsNet.Tests.AssemblyInfoInputs.cache
+C:\Users\heito\OneDrive\Área de Trabalho\Global_NET\gsnet.tests\obj\Debug\net8.0\GsNet.Tests.AssemblyInfo.cs
+C:\Users\heito\OneDrive\Área de Trabalho\Global_NET\gsnet.tests\obj\Debug\net8.0\GsNet.Tests.csproj.CoreCompileInputs.cache
+C:\Users\heito\OneDrive\Área de Trabalho\Global_NET\gsnet.tests\obj\Debug\net8.0\GsNet.Tests.sourcelink.json
