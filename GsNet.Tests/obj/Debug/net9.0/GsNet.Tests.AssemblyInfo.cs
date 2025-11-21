@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GsNet.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1188aa962471f48c6658cfb84b0ea3fa8c683312")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a55143eef11751447bfb2b74e27c329a5d29181c")]
 [assembly: System.Reflection.AssemblyProductAttribute("GsNet.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GsNet.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
