@@ -3,6 +3,40 @@
 
 API RESTful desenvolvida em .NET 9.0 para gerenciamento de usuários, localizações de trabalho, mensagens e autenticação. Sistema voltado para monitoramento de condições de trabalho e análise de níveis de estresse.
 
+A proposta do aplicativo é criar uma plataforma digital que promova simultaneamente a saúde do trabalhador e a saúde ambiental dentro do ambiente de trabalho. O app atuará como um guia integrado de bem-estar, segurança e sustentabilidade, incentivando hábitos saudáveis e práticas responsáveis no dia a dia profissional.
+
+O objetivo principal é proporcionar aos colaboradores informações, acompanhamento e ferramentas práticas para melhorar sua qualidade de vida durante o trabalho, ao mesmo tempo em que estimula empresas e indivíduos a adotarem comportamentos ambientalmente corretos.
+
+
+---
+
+Como o app vai unir saúde do trabalhador + saúde da natureza
+
+1. Saúde no Trabalho
+
+Monitoramento de bem-estar físico e mental (humor, estresse, cansaço, postura).
+
+Alertas de pausas ergonômicas e exercícios rápidos.
+
+Conteúdos sobre alimentação saudável, hidratação e boas práticas no ambiente corporativo.
+
+Canal para comunicação com a equipe de segurança do trabalho (CIPA/SESMT).
+
+
+2. Saúde da Natureza (Sustentabilidade) Relacionada ao Trabalho
+
+Dicas e metas diárias para redução de impacto ambiental no trabalho, como economia de energia, água e papel.
+
+Monitoramento do consumo ambiental da empresa (quando integrado a sistemas internos).
+
+Gamificação: desafios sustentáveis entre equipes (ex: semana sem copo descartável).
+
+Conteúdos educativos sobre ESG, reciclagem e preservação ambiental.
+
+# Link do vídeo no Youtube
+
+https://youtu.be/QSNdBvzbNqs
+
 ## Tecnologias
 
 - **.NET 9.0** - Framework principal
